@@ -48,46 +48,42 @@ RENAME TABLE old_name TO new_name;
 INSERT INTO table_name (column1, column2) VALUES (value1, value2);
 INSERT INTO users (name, age) VALUES ('张三', 25);
 ### 查询数据
-sql
--- 查询所有数据
+#### 查询所有数据
 SELECT * FROM table_name;
 
--- 条件查询
+#### 条件查询
 SELECT * FROM users WHERE age > 20;
 
--- 选择特定列
+#### 选择特定列
 SELECT name, age FROM users;
 
--- 排序
+#### 排序
 SELECT * FROM users ORDER BY age DESC;
 
--- 限制结果数量
+#### 限制结果数量
 SELECT * FROM users LIMIT 10;
-更新数据
-sql
+### 更新数据
 UPDATE table_name SET column1 = value1 WHERE condition;
 UPDATE users SET age = 26 WHERE name = '张三';
-删除数据
-sql
+### 删除数据
 DELETE FROM table_name WHERE condition;
 DELETE FROM users WHERE id = 1;
-常用查询子句
-sql
--- WHERE 条件
+## 5. 常用查询子句
+### WHERE 条件
 SELECT * FROM users WHERE age BETWEEN 20 AND 30;
 
--- LIKE 模糊查询
+### LIKE 模糊查询
 SELECT * FROM users WHERE name LIKE '张%';
 
--- IN 查询
+### IN 查询
 SELECT * FROM users WHERE age IN (20, 25, 30);
 
--- GROUP BY 分组
+### GROUP BY 分组
 SELECT age, COUNT(*) FROM users GROUP BY age;
 
--- HAVING 分组后过滤
+### HAVING 分组后过滤
 SELECT age, COUNT(*) FROM users GROUP BY age HAVING COUNT(*) > 5;
-用户和权限管理
+## 6. 用户和权限管理
 sql
 -- 创建用户
 CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
