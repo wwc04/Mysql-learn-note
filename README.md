@@ -79,7 +79,37 @@ drop table [if exists] 表名;
 <br>
 
 ## DML（数据操作语言，用来对数据库表中的数据进行增删改）
+### 添加数据
+#### --1.指定/全部字段添加数据
+ ```jsx title="src/components/HelloDocusaurus.js"
+insert into 表名（字段1，字段2） values(值1，值2);
+```
+ ```jsx title="src/components/HelloDocusaurus.js"
+insert into 表名 values (值1，值2，...);
+```
+#### --2.指定/全部字段批量添加数据
+ ```jsx title="src/components/HelloDocusaurus.js"
+insert into 表名（字段1，字段2） values(值1，值2)，(值1，值2)...;
+```
+ ```jsx title="src/components/HelloDocusaurus.js"
+insert into 表名 values (值1，值2，...)，(值1，值2，...);
+```
+### 修改数据(不加where会对整个表进行修改)
+ ```jsx title="src/components/HelloDocusaurus.js"
+update 表名 set 字段1 = 值1 ，字段2 = 值2 ，... ，where 条件;
+```
+### 删除数据
+ ```jsx title="src/components/HelloDocusaurus.js"
+delete from 表名 where 条件；
+```
 
 <br>
 
 ## DQL（数据查询语言，用来查询数据库中的表记录）
+### 基本查询
+### 条件查询
+### 分组查询
+### 排序查询
+### 分页查询
+
+
