@@ -34,7 +34,7 @@ create table tablename(
    ......
 )[comment 表注解]
 ```
- 表创建：[表设计](resource/mysql_DDL1.png)
+ ![表设计](resource/mysql_DDL1.png)
 
 <br>
 
