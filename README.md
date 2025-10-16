@@ -58,7 +58,7 @@ alter table 表名 add 字段 数据类型（长度） [comment 注解] [约束]
  ```jsx title="src/components/HelloDocusaurus.js"
 alter table 表名 modify 字段名 新数据类型（长度）;
 ```
-3）修改字段名和字段类型
+3）修改字段名
  ```jsx title="src/components/HelloDocusaurus.js"
 alter table 表名 change 旧字段 新字段 数据类型（长度） [comment 注解] [约束];
 ```
