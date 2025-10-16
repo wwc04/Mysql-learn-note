@@ -25,8 +25,8 @@ create database [if not exists] 数据库名 [default charest utf8mb4];
 drop database [if exist] 数据库名;
 ```
 
-## 表
-#### --1.表创建
+### 表
+#### --1.创建表
 ```jsx title="src/components/HelloDocusaurus.js"
 create table tablename(
    字段1 字段类型 [约束] [comment 字段1的注解]
@@ -35,6 +35,46 @@ create table tablename(
 )[comment 表注解]
 ```
  ![表设计](resource/mysql_DDL1.png)
+
+ #### --2.查询表
+1）查询当前数据库所有表
+ ```jsx title="src/components/HelloDocusaurus.js"
+show tables;
+```
+2）查询表结构
+  ```jsx title="src/components/HelloDocusaurus.js"
+desc 表名;
+```
+3）查询建表语句
+ ```jsx title="src/components/HelloDocusaurus.js"
+show create table 表名;
+```
+#### --3.修改表
+1）添加字段
+ ```jsx title="src/components/HelloDocusaurus.js"
+alter table 表名 add 字段 数据类型（长度） [comment 注解] [约束];
+```
+2）修改字段类型
+ ```jsx title="src/components/HelloDocusaurus.js"
+alter table 表名 modify 字段名 新数据类型（长度）;
+```
+3）修改字段名和字段类型
+ ```jsx title="src/components/HelloDocusaurus.js"
+alter table 表名 change 旧字段 新字段 数据类型（长度） [comment 注解] [约束];
+```
+4）删除字段
+ ```jsx title="src/components/HelloDocusaurus.js"
+alter table 表名 drop colum 字段名;
+```
+5）修改表名
+ ```jsx title="src/components/HelloDocusaurus.js"
+alter table 旧表名 rename to 新表名;
+```
+
+#### --4.删除表
+ ```jsx title="src/components/HelloDocusaurus.js"
+drop table [if exists] 表名;
+```
 
 <br>
 
